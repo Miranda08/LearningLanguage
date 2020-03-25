@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--Colour palette-->
+
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <!-- colour for the app bar and other primary UI elements -->
+    <color name="colorPrimary">#216583</color> <!-- Jeans Blue - Change this one or Accent one, as they are the same -->
+    <!-- Secondary colour -->
+    <color name="colorSecondary">#f76262</color> <!-- Kinda Coral Red, yet unused -->
+    <!-- Primary text colours -->
+    <color name="textColorPrimary">#FFFFFF</color> <!-- White for text -->
+    <!-- Secondary text colours -->
+    <color name="textColorSecondary">#fff1c1</color> <!-- Yellowish colour for text, yet unused -->
+    <!-- a darker variant of the primary colour, used this for
+         things like status bars and other app bars.  -->
+    <color name="colorPrimaryDark">#293462</color> <!-- Navy Blue -->
+    <!-- a secondary colour for controls like checkboxes and text fields.  -->
+    <color name="colorAccent">#216583</color> <!-- Jeans Blue -->
 </resources>
