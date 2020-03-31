@@ -1,5 +1,6 @@
 package org.wit.layla.activities
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -42,6 +43,11 @@ class FlashcardListActivity : AppCompatActivity(), FlashcardListener {
 
     override fun onFlashcardClick(flashcard: FlashcardModel) {
         startActivityForResult(intentFor<FlashcardActivity>().putExtra("flashcard_edit", flashcard), 0)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        recyclerView.adapter?.notifyDataSetChanged()
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
 }
