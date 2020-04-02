@@ -1,12 +1,12 @@
-package org.wit.layla.activities
+package org.wit.flashcard.activities
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.card_flashcard.view.*
-import org.wit.layla.R
-import org.wit.layla.models.FlashcardModel
+import org.wit.flashcard.R
+import org.wit.flashcard.models.FlashcardModel
 
 
 interface FlashcardListener {

@@ -1,4 +1,4 @@
-package org.wit.layla.models
+package org.wit.flashcard.models
 
 interface FlashcardStore {
     fun findAll(): List<FlashcardModel>

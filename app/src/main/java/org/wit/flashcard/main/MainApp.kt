@@ -1,10 +1,9 @@
-package org.wit.layla.main
+package org.wit.flashcard.main
 
 import android.app.Application
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
-import org.wit.layla.models.FlashcardMemStore
-import org.wit.layla.models.FlashcardModel
+import org.wit.flashcard.models.FlashcardMemStore
 
 class MainApp : Application(), AnkoLogger {
 

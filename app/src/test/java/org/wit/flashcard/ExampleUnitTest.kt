@@ -1,4 +1,4 @@
-package org.wit.layla
+package org.wit.flashcard
 
 import org.junit.Test
 

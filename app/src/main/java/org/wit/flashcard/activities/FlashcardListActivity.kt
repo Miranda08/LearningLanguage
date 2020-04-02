@@ -1,4 +1,4 @@
-package org.wit.layla.activities
+package org.wit.flashcard.activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -8,9 +8,9 @@ import android.view.*
 import kotlinx.android.synthetic.main.activity_flashcard_list.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivityForResult
-import org.wit.layla.R
-import org.wit.layla.main.MainApp
-import org.wit.layla.models.FlashcardModel
+import org.wit.flashcard.R
+import org.wit.flashcard.main.MainApp
+import org.wit.flashcard.models.FlashcardModel
 
 class FlashcardListActivity : AppCompatActivity(), FlashcardListener {
 

@@ -1,4 +1,4 @@
-package org.wit.layla.models
+package org.wit.flashcard.models
 
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
@@ -28,6 +28,7 @@ class FlashcardMemStore : FlashcardStore, AnkoLogger {
         if (foundFlashcard != null) {
             foundFlashcard.title = flashcard.title
             foundFlashcard.description = flashcard.description
+            foundFlashcard.image = flashcard.image
             logAll()
         }
     }
