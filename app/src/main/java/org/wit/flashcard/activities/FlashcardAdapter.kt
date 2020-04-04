@@ -4,8 +4,13 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.activity_flashcard.view.*
 import kotlinx.android.synthetic.main.card_flashcard.view.*
+import kotlinx.android.synthetic.main.card_flashcard.view.description
+import kotlinx.android.synthetic.main.card_flashcard.view.flashcardTitle
+import kotlinx.android.synthetic.main.card_flashcard.view.flashcardEnglish
 import org.wit.flashcard.R
+import org.wit.flashcard.helpers.readImageFromPath
 import org.wit.flashcard.models.FlashcardModel
 
 
@@ -31,8 +36,11 @@ class FlashcardAdapter constructor(private var flashcards: List<FlashcardModel>,
 
         fun bind(flashcard: FlashcardModel, listener: FlashcardListener) {
             itemView.flashcardTitle.text = flashcard.title
+            itemView.flashcardEnglish.text = flashcard.english
             itemView.description.text = flashcard.description
+            itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, flashcard.image))
             itemView.setOnClickListener{ listener.onFlashcardClick(flashcard) }
         }
-    }
-}
+    } // end class MainHolder
+
+} // end class FlashcardAdapter

@@ -25,7 +25,7 @@
                 android:id="@+id/toolbarAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:titleTextColor="@color/colorPrimary"/>
+                app:titleTextColor="@color/textColorPrimary"/>
         </android.support.design.widget.AppBarLayout>
 
         <ScrollView
@@ -45,6 +45,19 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:hint="@string/hint_flashcardTitle"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"/>
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/flashcardEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="@string/hint_flashcardEnglish"
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"

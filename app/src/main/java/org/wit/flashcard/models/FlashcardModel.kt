@@ -6,5 +6,6 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class FlashcardModel (var id: Long = 0,
                            var title: String = "",
+                           var english: String = "",
                            var description: String = "",
                            var image: String = "") : Parcelable
