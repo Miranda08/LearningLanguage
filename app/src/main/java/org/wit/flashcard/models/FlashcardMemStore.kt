@@ -27,6 +27,7 @@ class FlashcardMemStore : FlashcardStore, AnkoLogger {
         var foundFlashcard: FlashcardModel? = flashcards.find { f -> f.id == flashcard.id }
         if (foundFlashcard != null) {
             foundFlashcard.title = flashcard.title
+            foundFlashcard.translation = flashcard.translation
             foundFlashcard.description = flashcard.description
             foundFlashcard.image = flashcard.image
             logAll()

@@ -41,7 +41,7 @@ class FlashcardActivity : AppCompatActivity(), AnkoLogger {
             edit = true
             flashcard = intent.extras.getParcelable<FlashcardModel>("flashcard_edit")
             flashcardTitle.setText(flashcard.title)
-            flashcardEnglish.setText(flashcard.english)
+            flashcardDutch.setText(flashcard.translation)
             description.setText(flashcard.description)
             flashcardImage.setImageBitmap(readImageFromPath(this, flashcard.image))
             if(flashcard.image != null ){
@@ -53,7 +53,7 @@ class FlashcardActivity : AppCompatActivity(), AnkoLogger {
         //add flashcards
         btnAdd.setOnClickListener() {
             flashcard.title = flashcardTitle.text.toString()
-            flashcard.english = flashcardEnglish.text.toString()
+            flashcard.translation = flashcardDutch.text.toString()
             flashcard.description = description.text.toString()
 
             if(flashcard.title.isEmpty()) {
@@ -65,7 +65,7 @@ class FlashcardActivity : AppCompatActivity(), AnkoLogger {
                 } else {
                     app.flashcards.create(flashcard.copy())
                 }
-                info("add Button Pressed: $flashcardTitle & $flashcardEnglish")
+                info("add Button Pressed: $flashcardTitle & $flashcardDutch")
                 setResult((AppCompatActivity.RESULT_OK))
                 finish()
             }

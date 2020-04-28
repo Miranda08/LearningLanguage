@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Learning Language</string>
     <string name="button_addFlashcard">Add flashcard</string>
-    <string name="hint_flashcardTitle">Dutch</string>
-    <string name="hint_flashcardEnglish">Translation English</string>
+    <string name="hint_flashcardTitle">English</string>
+    <string name="hint_flashcardDutch">Translation Dutch</string>
     <string name="hint_flashcardDescription">Flashcard Description - What is it? What does it mean?</string>
     <string name="menu_addFlashcard">Add</string>
     <string name="cancel">Cancel</string>
@@ -14,4 +14,7 @@
 
     <string name="enter_flashcard_title">Please Enter a title</string>
     <string name="save_flashcard">Save Flashcard</string>
+
+    <string name="dutchFlag">Dutch Flag Icon</string>
+    <string name="englishFlag">English Flag Icon</string>
 </resources>
