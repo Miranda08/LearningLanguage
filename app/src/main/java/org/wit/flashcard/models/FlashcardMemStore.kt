@@ -34,6 +34,10 @@ class FlashcardMemStore : FlashcardStore, AnkoLogger {
         }
     }
 
+    override fun delete(flashcard: FlashcardModel) {
+        flashcards.remove(flashcard)
+    }
+
     fun logAll() {
         flashcards.forEach{ info("$it")}
     }

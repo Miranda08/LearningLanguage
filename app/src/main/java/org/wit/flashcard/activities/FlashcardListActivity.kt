@@ -21,10 +21,13 @@ class FlashcardListActivity : AppCompatActivity(), FlashcardListener {
         setContentView(R.layout.activity_flashcard_list)
         app = application as MainApp
 
+        //layout and populate for display
         val layoutManager = LinearLayoutManager(this)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = FlashcardAdapter(app.flashcards.findAll(), this)
+        recyclerView.layoutManager = layoutManager // recyclerView is a widget in activity_flashcard_list.xml
+//        recyclerView.adapter = FlashcardAdapter(app.flashcards.findAll(), this) -> new one under this
+        loadFlashcards()
 
+        //enable action bar and set title
         toolbarMain.title = title
         setSupportActionBar(toolbarMain)
     }
@@ -41,13 +44,26 @@ class FlashcardListActivity : AppCompatActivity(), FlashcardListener {
         return super.onOptionsItemSelected(item)
     }
 
+    //edit a flashcard
     override fun onFlashcardClick(flashcard: FlashcardModel) {
         startActivityForResult(intentFor<FlashcardActivity>().putExtra("flashcard_edit", flashcard), 0)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        recyclerView.adapter?.notifyDataSetChanged()
+//        recyclerView.adapter?.notifyDataSetChanged() -> new one under this
+        loadFlashcards()
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    //load (new) flashcards
+    private fun loadFlashcards() {
+        showFlashcards(app.flashcards.findAll())
+    }
+
+    //show flashcards
+    fun showFlashcards (flashcards: List<FlashcardModel>) {
+        recyclerView.adapter = FlashcardAdapter(flashcards, this)
+        recyclerView.adapter?.notifyDataSetChanged()
     }
 
 }

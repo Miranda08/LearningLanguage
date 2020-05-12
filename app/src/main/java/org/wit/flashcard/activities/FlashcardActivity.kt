@@ -81,12 +81,20 @@ class FlashcardActivity : AppCompatActivity(), AnkoLogger {
     //
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_flashcard, menu)
+        if (edit && menu != null) menu.getItem(0).setVisible(true)
         return super.onCreateOptionsMenu(menu)
     }
 
 
+    //selected flashcard in view - actions of menu buttons
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+            // delete current flashcard
+            R.id.item_delete -> {
+                app.flashcards.delete(flashcard)
+                finish()
+            }
+            // cancel editing flashcard
             R.id.item_cancel -> {
                 finish()
             }

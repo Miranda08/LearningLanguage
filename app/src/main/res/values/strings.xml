@@ -5,6 +5,7 @@
     <string name="hint_flashcardDutch">Translation Dutch</string>
     <string name="hint_flashcardDescription">Flashcard Description - What is it? What does it mean?</string>
     <string name="menu_addFlashcard">Add</string>
+    <string name="menu_deleteFlashcard">Delete</string>
     <string name="cancel">Cancel</string>
 
     <string name="button_addImage">Add Image</string>
