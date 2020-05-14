@@ -7,6 +7,7 @@
     android:elevation="24dp">
 
     <RelativeLayout
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
@@ -15,6 +16,7 @@
         <ImageView
             android:id="@+id/imageIcon"
             android:contentDescription="@string/flashcard_image"
+            android:src="@drawable/uk_nl_icon"
             android:layout_width="256dp"
             android:layout_height="256dp"
             android:layout_centerHorizontal="true"

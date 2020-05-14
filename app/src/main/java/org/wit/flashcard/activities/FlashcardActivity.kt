@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_flashcard.*
+import kotlinx.android.synthetic.main.activity_flashcard.description
+import kotlinx.android.synthetic.main.activity_flashcard.flashcardDutch
+import kotlinx.android.synthetic.main.activity_flashcard.flashcardTitle
+import kotlinx.android.synthetic.main.card_flashcard.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
@@ -25,6 +29,7 @@ class FlashcardActivity : AppCompatActivity(), AnkoLogger {
 
     val IMAGE_REQUEST = 1
 
+    //onCreate
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flashcard)
