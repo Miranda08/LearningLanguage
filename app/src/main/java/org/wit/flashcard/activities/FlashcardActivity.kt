@@ -87,6 +87,7 @@ class FlashcardActivity : AppCompatActivity(), AnkoLogger {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_flashcard, menu)
         if (edit && menu != null) menu.getItem(0).setVisible(true)
+
         return super.onCreateOptionsMenu(menu)
     }
 
