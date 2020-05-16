@@ -16,4 +16,6 @@
     <color name="colorPrimaryDark">#293462</color> <!-- Navy Blue -->
     <!-- a secondary colour for controls like checkboxes and text fields.  -->
     <color name="colorAccent">#216583</color> <!-- Jeans Blue -->
+
+    <color name="colorWhite">#FFFFFF</color> >
 </resources>
