@@ -1,8 +1,21 @@
 <resources>
-    <string name="app_name">LayLa</string>
+    <string name="app_name">Learning Language</string>
     <string name="button_addFlashcard">Add flashcard</string>
-    <string name="hint_flashcardTitle">Flashcard Title</string>
-    <string name="hint_flashcardTranslation">Flashcard Translation</string>
+    <string name="hint_flashcardTitle">English</string>
+    <string name="hint_flashcardDutch">Translation Dutch</string>
     <string name="hint_flashcardDescription">Flashcard Description - What is it? What does it mean?</string>
     <string name="menu_addFlashcard">Add</string>
+    <string name="menu_deleteFlashcard">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="button_addImage">Add Image</string>
+    <string name="select_flashcard_image">Select flashcard image</string>
+    <string name="change_flashcard_image">Change flashcard image</string>
+    <string name="flashcard_image">flashcard image</string>
+
+    <string name="enter_flashcard_title">Please Enter a title</string>
+    <string name="save_flashcard">Save Flashcard</string>
+
+    <string name="dutchFlag">Dutch Flag Icon</string>
+    <string name="englishFlag">English Flag Icon</string>
 </resources>

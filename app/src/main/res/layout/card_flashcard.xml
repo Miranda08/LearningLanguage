@@ -1,28 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginBottom="8dp"
     android:elevation="24dp">
 
     <RelativeLayout
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
+        <!-- Photo of the word - In het midden [center] bovenaan de tekst -->
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:contentDescription="@string/flashcard_image"
+            android:src="@drawable/uk_nl_icon"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"/>
+        <!-- centerCrop to resize image in the middle of imageview -->
+
+        <!-- English flag begore English text -->
+        <ImageView
+            android:id="@+id/uk_flag"
+            android:contentDescription="@string/dutchFlag"
+            android:src="@drawable/united_kingdom_flag_square_icon_256"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignStart="@id/imageIcon"
+            android:layout_below="@id/imageIcon"
+            app:showAsAction="always"/>
+
+        <!-- English text -->
         <TextView
             android:id="@+id/flashcardTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/imageIcon"
+            android:layout_toEndOf="@id/uk_flag"
+            android:textSize="30sp"/>
+
+        <!-- Dutch flag begore Dutch text -->
+        <ImageView
+            android:id="@+id/dutch_flag"
+            android:contentDescription="@string/englishFlag"
+            android:src="@drawable/netherlands_flag_square_icon_256"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignStart="@id/imageIcon"
+            android:layout_below="@id/flashcardTitle"
+            app:showAsAction="always"/>
+
+        <!-- Dutch text -->
+        <TextView
+            android:id="@+id/flashcardDutch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/flashcardTitle"
+            android:layout_toEndOf="@id/dutch_flag"
             android:textSize="30sp"/>
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/flashcardTitle"/>
+            android:layout_alignStart="@id/imageIcon"
+            android:layout_below="@id/flashcardDutch"
+            android:textSize="20sp"/>
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
