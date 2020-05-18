@@ -14,6 +14,7 @@
     <string name="flashcard_image">flashcard image</string>
 
     <string name="enter_flashcard_title">Please Enter a title</string>
+    <string name="enter_flashcard_translation">Please Enter a Dutch translation</string>
     <string name="save_flashcard">Save Flashcard</string>
 
     <string name="dutchFlag">Dutch Flag Icon</string>
