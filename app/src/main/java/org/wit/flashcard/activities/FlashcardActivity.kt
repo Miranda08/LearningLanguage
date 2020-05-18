@@ -63,8 +63,9 @@ class FlashcardActivity : AppCompatActivity(), AnkoLogger {
 
             if(flashcard.title.isEmpty()) {
                 toast(R.string.enter_flashcard_title)
-            }
-            else {
+            } else if (flashcard.translation.isEmpty()) {
+                toast(R.string.enter_flashcard_translation)
+            } else {
                 if (edit){
                     app.flashcards.update(flashcard.copy())
                 } else {
